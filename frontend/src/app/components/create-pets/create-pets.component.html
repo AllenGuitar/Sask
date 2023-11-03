@@ -1,0 +1,74 @@
+<header>
+
+    <div class="linksref">
+    
+    <span routerLink="/about">Conócenos</span>
+    <span routerLink="/contact">Contáctanos</span>
+    <span routerLink="/pqrs">PQRS</span>
+  
+  
+    </div>
+  
+    <div class="ini">
+      <img [src]="'assets/SaskWhite.png'" alt="Imagen">
+      <span class="line">|</span><span class="title"> Mascotas</span>
+    </div>
+  
+  
+  </header>
+  <app-top></app-top>
+  <main class="container">
+    <h2 class="tit">Hola {{ getName() }}, encuentra a tus mascotas!</h2>
+  
+  
+  
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active">Crea</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/pets">Mi lista</a>
+      </li>
+    </ul>
+  
+
+  
+    <!-- CREAR LAS MASCOTAS -->
+  
+    <h2 class="tit">Quieres crear o editar el registro de tu mascota?</h2>
+  
+    <form class="container my-5" #petsForm="ngForm" (ngSubmit)="handleSubmitPets(petsForm)">
+
+  
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name"  [(ngModel)]="petservice.selectPet.name" name="name">  
+      </div>
+  
+      <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Tipo de mascota</label>
+          <input type="text" class="form-control" id="type"  [(ngModel)]="petservice.selectPet.type" name="type">  
+        </div>
+  
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Que edad tiene?</label>
+          <input type="text" class="form-control" id="years"  [(ngModel)]="petservice.selectPet.years" name="years">  
+        </div>
+  
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="vaccinated" [(ngModel)]="petservice.selectPet.vaccinated" name="vaccinated">
+        <label class="form-check-label" for="vaccinated">Esta vacunado?</label>
+      </div>
+      
+   
+        <button type="submit" class="btn btn-secondary">Crealo!</button>
+   
+  
+    </form>
+  
+  
+  
+    
+  </main>
+  <app-bottom></app-bottom>
+  

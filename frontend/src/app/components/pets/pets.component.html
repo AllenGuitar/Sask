@@ -1,0 +1,146 @@
+<header>
+
+  <div class="linksref">
+  
+    <span routerLink="/about">Conócenos</span>
+    <span routerLink="/contact">Contáctanos</span>
+    <span routerLink="/pqrs">PQRS</span>
+
+
+  </div>
+
+  <div class="ini">
+    <img [src]="'assets/SaskWhite.png'" alt="Imagen">
+    <span class="line">|</span><span class="title"> Mascotas</span>
+  </div>
+
+
+</header>
+<app-top></app-top>
+<main class="container">
+  <h2 class="tit">Hola {{ getName() }}, encuentra a tus mascotas!</h2>
+
+
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/createpets">Crea</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" >Mi lista</a>
+    </li>
+  </ul>
+
+
+<!-- MOSTRAR LAS MASCOTAS -->
+<div class="container" *ngFor="let pets of petservice.pets; let i = index">
+
+  <div class="card masc">
+    <div class="card-header bg-secondary text-light">{{pets.type}}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{pets.name}} - {{pets.years}}</h5>
+      <p class="card-text">
+        ¿Está vacunado?
+        <br>{{pets.vaccinated}}
+      </p>
+
+      <div class="modal fade" [id]="'petsDelete_' + i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Deseas eliminar el registro de {{pets.name}}</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Contenido del modal -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-dark" (click)="removePet(pets._id)" data-bs-dismiss="modal">Si, Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- EDITAR LAS MASCOTAS MODAL -->
+
+
+      <div class="modal fade" [id]="'petsEdit_' + i" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Estas editando el registro de {{pets.name}}</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="container my-5" #petsForm="ngForm" (ngSubmit)="handleSubmitPets(petsForm)">
+   
+              <div class="mb-3">
+                <input type="hidden" class="form-control" [(ngModel)]="petservice.selectPet._id" name="_id">  
+              </div>
+          
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name"  [(ngModel)]="petservice.selectPet.name" name="name">  
+              </div>
+          
+              <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Tipo de mascota</label>
+                  <input type="text" class="form-control" id="type"  [(ngModel)]="petservice.selectPet.type" name="type">  
+                </div>
+          
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Que edad tiene?</label>
+                  <input type="text" class="form-control" id="years"  [(ngModel)]="petservice.selectPet.years" name="years">  
+                </div>
+          
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="vaccinated" [(ngModel)]="petservice.selectPet.vaccinated" name="vaccinated">
+                <label class="form-check-label" for="vaccinated">Esta vacunado?</label>
+              </div>
+              
+              <ng-container *ngIf="petservice.selectPet._id; else create">
+                <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Actualizalo!</button>
+              </ng-container>
+              <ng-template #create>
+                <button type="submit" class="btn btn-primary">Crealo!</button>
+              </ng-template>
+          
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!--  -->
+
+
+      <button class="btn btn-light" (click)="editPet(pets) " data-bs-toggle="modal" [attr.data-bs-target]="'#petsEdit_' + i" ><i class="bi bi-pencil-fill"></i></button>
+      <button class="btn btn-danger ms-3" data-bs-toggle="modal" [attr.data-bs-target]="'#petsDelete_' + i"><i class="bi bi-trash3"></i></button>
+    </div>
+  </div>
+</div>
+
+
+<!-- MODAL PARA ELIMINAR A LAS MASCOTAS -->
+
+
+<!-- Button trigger modal -->
+
+
+
+
+<!--  -->
+
+  <!-- CREAR LAS MASCOTAS -->
+
+ 
+
+  
+
+
+
+  
+</main>
+<app-bottom></app-bottom>

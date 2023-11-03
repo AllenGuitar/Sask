@@ -1,0 +1,49 @@
+<header>
+
+    <div class="linksref">
+    
+      <span routerLink="/about">Conócenos</span>
+      <span routerLink="/contact">Contáctanos</span>
+      <span routerLink="/pqrs">PQRS</span>
+  
+    </div>
+  
+    <div class="ini">
+      <img [src]="'assets/SaskWhite.png'" alt="Imagen">
+      <span class="line">|</span><span class="title"> Sask</span>
+    </div>
+  
+  
+  </header>
+  
+  <app-top></app-top>
+  <main class="container cent">
+    <h1 class="tit">Estamos encantados de conocerte!</h1>
+    <!-- submit para ejecutar una funcion -->
+    <form class="container my-5" #usersForm="ngForm" (ngSubmit)="createUser(usersForm)">
+
+  
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name"  [(ngModel)]="userservice.selectUser.name" name="name">  
+        </div>
+    
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="type"  [(ngModel)]="userservice.selectUser.email" name="email">  
+          </div>
+    
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="years"  [(ngModel)]="userservice.selectUser.password" name="password">  
+          </div>
+
+          <button type="submit" class="btn btn-secondary">Crealo!</button>
+
+    
+      </form>
+  
+      
+  </main>
+  <app-bottom></app-bottom>
+  

@@ -1,0 +1,67 @@
+<header>
+  <div class="linksref">
+    <span routerLink="/about">Conócenos</span>
+    <span routerLink="/contact">Contáctanos</span>
+    <span routerLink="/pqrs">PQRS</span>
+  </div>
+
+  <div class="ini">
+    <img [src]="'assets/SaskWhite.png'" alt="Imagen" />
+    <span class="line">|</span><span class="title"> Sask</span>
+  </div>
+</header>
+
+<app-top></app-top>
+<main>
+  <div class="container cont">
+    <h1>Quienes Somos?</h1>
+
+    <p>
+      Nuestra pasión y compromiso son los animales!, estamos dedicados a brindar
+      un espacio seguro y acogedor para todas las mascotas y sus dueños. Nos
+      enorgullece ser la puerta de entrada a un mundo de comodidad y cuidado
+      para tus amigos peludos.
+    </p>
+
+    <div class="row row-cols-1 row-cols-md-1 g-4 pt-5">
+      <div class="col">
+        <div class="card">
+          <img
+            [src]="'assets/main1.jpg'"
+            class="card-img-top imajin"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Registro Fácil:</h5>
+            <p class="card-text">
+              Hemos simplificado el proceso de registro para que puedas ingresar
+              a tu mascota de manera rápida y sencilla. Ya sea que necesites un
+              lugar para hospedar a tu amigo peludo durante unas horas o por
+              varios días, estamos aquí para ayudarte.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            [src]="'assets/main2.jpg'"
+            class="card-img-top imajin"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Comunidad</h5>
+            <p class="card-text">
+              queremos que tú y tu mascota se sientan bienvenidos y apreciados.
+              Únete a nuestra comunidad de amantes de los animales y descubre lo
+              que significa proporcionar el mejor cuidado y amor a tus amigos
+              peludos
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<app-bottom></app-bottom>

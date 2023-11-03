@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ubuntu:wght@300&display=swap');
+
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.first{
+    width: 19%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 5em;
+    height: 200px;
+    padding:2%;
+
+}
+
+.linn{
+    width: 1px;
+    background-color: white;
+    height: 100px;
+}
+
+.second{
+    width: 60%;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: medium;
+    justify-content: left;
+    padding-left: 1%;
+}
+
+.second span{
+    padding: 10px;
+}
+
+.three{
+    width: 205;
+    display: flex;
+    font-size: 2.2em;
+    gap: 15px;
+}
+
+.rights{
+    width: 100%;
+    color: darkgray;
+    text-align: center;
+    padding-bottom: 10px;
+
+}

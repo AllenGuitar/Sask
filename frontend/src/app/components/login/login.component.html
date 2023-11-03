@@ -1,0 +1,61 @@
+<header>
+
+  <div class="linksref">
+  
+    <span routerLink="/about">Conócenos</span>
+    <span routerLink="/contact">Contáctanos</span>
+    <span routerLink="/pqrs">PQRS</span>
+
+
+  </div>
+
+  <div class="ini">
+    <img [src]="'assets/SaskWhite.png'" alt="Imagen">
+    <span class="line">|</span><span class="title"> Sask</span>
+  </div>
+
+
+</header>
+
+<app-top></app-top>
+<main class="container cent">
+  <h1 class="logtit">Estamos encantados de conocerte!</h1>
+  <!-- submit para ejecutar una funcion -->
+  <form (submit)="login()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Correo</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        [(ngModel)]="user.email"
+        aria-describedby="emailHelp"
+      />
+     
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Contraseña</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        [(ngModel)]="user.password"
+      />
+      <div id="emailHelp" class="form-text">
+        No compartas tu contraseña con nadie mas <i class="bi bi-emoji-smile"></i>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-dark">Ingresar</button>
+  </form>
+
+  <hr><h6>o si eres nuevo:</h6><br>
+  <button class="btn btn-secondary" routerLink="/register">Regístrate</button>
+  <hr>
+  
+
+    
+</main>
+<app-bottom></app-bottom>

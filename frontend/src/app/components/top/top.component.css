@@ -1,0 +1,24 @@
+.log{
+    width: 15%;
+}
+
+.list li{
+    font-size: larger;
+    
+}
+
+.list a{
+    color: #482344;
+}
+
+.list li:hover{
+    text-decoration: underline;
+}
+
+.divlis{
+    padding-left: 21%;
+}
+
+.ffr{
+    padding-left: 40%;
+}

@@ -1,0 +1,111 @@
+<header>
+    <div class="linksref">
+      <span routerLink="/about">Conócenos</span>
+      <span routerLink="/contact">Contáctanos</span>
+      <span routerLink="/pqrs">PQRS</span>
+    </div>
+  
+    <div class="ini">
+      <img [src]="'assets/SaskWhite.png'" alt="Imagen" />
+      <span class="line">|</span><span class="title"> Sask</span>
+    </div>
+  </header>
+  
+  <app-top></app-top>
+  <main>
+    <div class="container cont">
+      <h1>PQRS</h1>
+  
+      <div class="row row-cols-1 row-cols-md-1 g-4 p-5 gap-5">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  P: ¿Qué es una página de registro de mascotas y por qué debería utilizarla?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Una página de registro de mascotas es una plataforma digital diseñada para ayudarte a mantener un registro organizado y seguro de toda la información relevante sobre tus mascotas. Deberías utilizarla para facilitar la gestión de la salud, bienestar y cuidado de tus amigos peludos, evitando olvidos importantes y garantizando su seguridad.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  P: ¿Cómo puedo actualizar la información de mis mascotas?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Puedes actualizar la información de tus mascotas en cualquier momento. Simplemente inicia sesión en tu cuenta, ve al registro de tu mascota y edita los detalles que desees modificar.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  P: ¿Cómo puedo agregar una nueva mascota a mi perfil?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Agregar una nueva mascota es sencillo. Inicia sesión en tu cuenta, ve al menu de mascotas, selecciona la opción "Crear". Luego, sigue las instrucciones para ingresar la información de tu nueva mascota.
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+  
+        <hr>
+  
+        <div class="card mb-3 border-white">
+          <div class="row g-0 p-5 gege">
+            <div class="col-md-4">
+              <img [src]="'assets/contact4.png'" class="img-fluid rounded-start gg" alt="..." />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >¿Tienes otra pregunta?, Escribenos</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Correo"
+                    />
+          
+                  </div>
+                  <div class="mb-3">
+                   
+                    
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="¿Que te gustaria preguntarnos?"
+                    />
+                  </div>
+                  <div class="mb-3 form-check">
+                   
+                   
+                  </div>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <app-bottom></app-bottom>
+  

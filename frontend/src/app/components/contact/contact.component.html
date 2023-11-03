@@ -1,0 +1,116 @@
+<header>
+  <div class="linksref">
+    <span routerLink="/about">Conócenos</span>
+    <span routerLink="/contact">Contáctanos</span>
+    <span routerLink="/pqrs">PQRS</span>
+  </div>
+
+  <div class="ini">
+    <img [src]="'assets/SaskWhite.png'" alt="Imagen" />
+    <span class="line">|</span><span class="title"> Sask</span>
+  </div>
+</header>
+
+<app-top></app-top>
+<main>
+  <div class="container cont">
+    <h1>Contáctanos</h1>
+
+    <div class="row row-cols-1 row-cols-md-1 g-4 p-5 gap-5">
+      <div class="card mb-3 border-white ctr">
+        <div class="row g-0 ">
+          <div class="col-md-4 ">
+            <img [src]="'assets/contact1.png'" class="img-fluid rounded-start iemgi" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="card-text">
+               (+57) 320-399-62-66
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="card mb-3 border-white ctr">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img [src]="'assets/contact2.png'" class="img-fluid rounded-start iemgi" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="card-text">
+                contacto@sask.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="card mb-3 border-white">
+        <div class="row g-0">
+          <div class="col-md-4 p-5 gege">
+            <img [src]="'assets/contact3.png'" class="img-fluid rounded-start gg" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.276973304458!2d-74.23082828865037!3d4.7218796414521425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f780fc779db8b%3A0x5fbe350eaf3bd68!2sCra.%2016a%20%2311-37%2C%20Mosquera%2C%20Cundinamarca!5e0!3m2!1sen!2sco!4v1697683116988!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="card mb-3 border-white">
+        <div class="row g-0 p-5 gege">
+          <div class="col-md-4">
+            <img [src]="'assets/contact4.png'" class="img-fluid rounded-start gg" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Escribenos</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="Correo"
+                  />
+        
+                </div>
+                <div class="mb-3">
+                 
+                  
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="¿Que te gustaria preguntarnos?"
+                  />
+                </div>
+                <div class="mb-3 form-check">
+                 
+                 
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<app-bottom></app-bottom>
