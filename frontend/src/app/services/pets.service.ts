@@ -18,7 +18,7 @@ export class PetsService {
     vaccinated:false
   }
 
-  urlBackend="http://localhost:5000/list"
+  urlBackend="http://3.20.227.54:8080/list"
 
   createPet(pets:Pets){
     return this.http.post(this.urlBackend,pets)

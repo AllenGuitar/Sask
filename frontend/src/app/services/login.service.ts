@@ -9,7 +9,7 @@ export class LoginService {
 
   constructor(private http:HttpClient,private router:Router) { }
 login(user:any){
-  return this.http.post<any>("http://localhost:5000/login",user)
+  return this.http.post<any>("http://3.20.227.54:8080/login",user)
 }
 
 isLogOrNot(){

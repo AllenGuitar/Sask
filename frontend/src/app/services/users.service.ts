@@ -19,7 +19,7 @@ export class UsersService {
     pets: false
 }
 
-  urlBackend="http://localhost:5000/users"
+  urlBackend="http://3.20.227.54:8080/users"
 
   createUser(users:Users){
     return this.http.post(this.urlBackend,users)

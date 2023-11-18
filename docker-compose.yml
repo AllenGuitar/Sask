@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - '27017'
+    volumes:
+      - mongodata:/data/db
+    networks:
+      - app-network
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - '80:4200'
+    networks:
+      - app-network
+  backend:
+    depends_on:
+      - mongo
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
+    environment:
+      - MONGODB_ATLAS_URI=mongodb://mongo:27017/Sask
+    networks:
+      - app-network
+volumes:
+  mongodata:
+networks:
+  app-network:
+    driver: bridge 
