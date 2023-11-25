@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Router } from '@angular/router';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class LoginService {
 
   constructor(private http:HttpClient,private router:Router) { }
 login(user:any){
-  return this.http.post<any>("http://3.20.227.54:8080/login",user)
+  return this.http.post<any>(environment.apiUrl + '/login', user)
 }
 
 isLogOrNot(){

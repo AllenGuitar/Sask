@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Users } from '../interfaces/schemas';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class UsersService {
     pets: false
 }
 
-  urlBackend="http://3.20.227.54:8080/users"
+  urlBackend=environment.apiUrl + '/users'
 
   createUser(users:Users){
     return this.http.post(this.urlBackend,users)
