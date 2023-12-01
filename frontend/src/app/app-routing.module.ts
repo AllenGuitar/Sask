@@ -11,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PqrsComponent } from './components/pqrs/pqrs.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
+import { DatesComponent } from './components/dates/dates.component';
 
 const routes: Routes = [
   { path:'',
@@ -24,6 +25,9 @@ const routes: Routes = [
 
   { path:'createpets',
   component:CreatePetsComponent,canActivate:[authGuard]},
+
+  { path:'dates',
+  component:DatesComponent,canActivate:[authGuard]},
 
   { path:'register',
   component:RegisterComponent},

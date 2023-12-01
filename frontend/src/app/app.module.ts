@@ -24,6 +24,7 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
 import { ListPetsComponent } from './components/list-pets/list-pets.component';
 import { StoreModule } from '@ngrx/store';
 import { petsReducer } from './store/products.reducer';
+import { DatesComponent } from './components/dates/dates.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { petsReducer } from './store/products.reducer';
     ContactComponent,
     PqrsComponent,
     PrivacyComponent,
-    ListPetsComponent
+    ListPetsComponent,
+    DatesComponent
   ],
   imports: [
     BrowserModule,

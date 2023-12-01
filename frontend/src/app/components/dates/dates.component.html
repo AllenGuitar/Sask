@@ -1,0 +1,136 @@
+<header>
+
+    <div class="linksref">
+    
+    <span routerLink="/about">Conócenos</span>
+    <span routerLink="/contact">Contáctanos</span>
+    <span routerLink="/pqrs">PQRS</span>
+  
+  
+    </div>
+  
+    <div class="ini">
+      <img [src]="'assets/SaskWhite.png'" alt="Imagen">
+      <span class="line">|</span><span class="title"> Mascotas</span>
+    </div>
+  
+  
+  </header>
+  <app-top></app-top>
+  <main class="container">
+   
+  
+
+  
+    <!-- CREAR LAS MASCOTAS -->
+  
+    <h2 class="tit"><i class="bi bi-calendar-heart"></i>  Agenda su cita</h2>
+  
+  
+    <div class="container" *ngFor="let pet of pets">
+
+        <div class="card masc">
+         
+          <div class="card-body">
+            <h5 class="card-title">{{pet.name}} </h5>
+            <p>Edad: {{pet.years}}</p>
+
+      
+      
+          </div>
+        </div>
+        
+      </div>
+  
+        
+
+      <div class="container mt-5">
+        <h2 class="mb-4">Selecciona la fecha - Diciembre 2023</h2>
+      
+        <div class="row">
+          <div class="col">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Dom</th>
+                  <th scope="col">Lun</th>
+                  <th scope="col">Mar</th>
+                  <th scope="col">Mié</th>
+                  <th scope="col">Jue</th>
+                  <th scope="col">Vie</th>
+                  <th scope="col">Sáb</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="day"></td>
+                  <td class="day"></td>
+                  <td class="day"></td>
+                  <td class="day"></td>
+                  <td class="day"></td>
+                  <td class="tod">1</td>
+                  <td class="day">2</td>
+                </tr>
+                <tr>
+                    <td class="day">3</td>
+                    <td class="day">4</td>
+                    <td class="day">5</td>
+                    <td class="day">6</td>
+                    <td class="day">7</td>
+                    <td class="day">8</td>
+                    <td class="day">9</td>
+                  </tr>
+                  <tr>
+                    <td class="day">10</td>
+                    <td class="day">11</td>
+                    <td class="day">12</td>
+                    <td class="day">13</td>
+                    <td class="day">14</td>
+                    <td class="day">15</td>
+                    <td class="day">16</td>
+                  </tr>
+                  <tr>
+                    <td class="day">17</td>
+                    <td class="day">18</td>
+                    <td class="day">19</td>
+                    <td class="day">20</td>
+                    <td class="day">21</td>
+                    <td class="day">22</td>
+                    <td class="day">23</td>
+                  </tr>
+
+                  <tr>
+                    <td class="day">24</td>
+                    <td class="day">25</td>
+                    <td class="day">26</td>
+                    <td class="day">27</td>
+                    <td class="day">28</td>
+                    <td class="day">29</td>
+                    <td class="day">30</td>
+                  </tr>
+
+                  <tr>
+                    <td class="day">31</td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <button class="btn btn-success ms-3 mt-5" routerLink="/dates"><i class="bi bi-calendar-heart">  Toma el día</i></button>
+      </div>
+      
+  
+  
+  
+    
+  </main>
+  <app-bottom></app-bottom>
+  
