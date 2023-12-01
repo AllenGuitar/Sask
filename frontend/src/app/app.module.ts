@@ -21,6 +21,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PqrsComponent } from './components/pqrs/pqrs.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
     })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  StoreModule.forRoot({pets:petsReducer})
 })
 export class AppModule { }
