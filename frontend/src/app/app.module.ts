@@ -21,6 +21,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PqrsComponent } from './components/pqrs/pqrs.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
+import { ListPetsComponent } from './components/list-pets/list-pets.component';
 import { StoreModule } from '@ngrx/store';
 import { petsReducer } from './store/products.reducer';
 
@@ -39,7 +40,8 @@ import { petsReducer } from './store/products.reducer';
     AboutComponent,
     ContactComponent,
     PqrsComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    ListPetsComponent
   ],
   imports: [
     BrowserModule,

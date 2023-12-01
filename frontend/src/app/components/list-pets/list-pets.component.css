@@ -1,0 +1,12 @@
+.cart{
+    background-color: white;
+    width: 4%;
+    height: 8%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+.imag{
+    width: 100%;
+    font-size: 1.75rem !important;
+}
