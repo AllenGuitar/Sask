@@ -1,6 +1,6 @@
 import { createAction, props } from "@ngrx/store";
 import { Pets } from "../interfaces/schemas";
 
-export const ADD_PRODUCTS='Add Products'
+export const ADD_PETS='Add Pets'
 
-export const addProducts=createAction("[Pets Component] Add Pets",props<{pets:Pets}>())
+export const addPets=createAction("[Pets Component] Add Pets",props<{pets:Pets}>())

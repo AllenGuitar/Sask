@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { ToastrService } from 'ngx-toastr';
 import { PetsService } from '../../services/pets.service'
+import { Pets } from '../../interfaces/schemas';
+import { Store } from '@ngrx/store';
+import * as PetsActions from './../../store/products.actions';
+import { AppState } from './../../app.state'; 
 
 @Component({
   selector: 'app-pets',
@@ -14,7 +18,8 @@ export class PetsComponent {
   constructor(
     private toastr: ToastrService,
     private jwthelper:JwtHelperService,
-    public petservice:PetsService
+    public petservice:PetsService,
+    private store: Store<AppState>
   ) {}
 
   ngOnInit():void{
@@ -94,6 +99,12 @@ removePet(id:string | any){
     }
 
   )
+}
+
+addPets(name: string, years: string) {
+  console.log('hola')
+  const pets: Pets = {name: name, years: years };
+  this.store.dispatch(PetsActions.addPets({ pets }));
 }
 
 }

@@ -18,7 +18,7 @@ export class ListPetsComponent implements OnInit{
   ){}
 
   ngOnInit(){
-      this.store.pipe(select('products')).subscribe((pets:Pets[])=>{
+      this.store.pipe(select('pets')).subscribe((pets:Pets[])=>{
         console.log(pets)
         this.pets=pets
       })

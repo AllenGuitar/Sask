@@ -9,9 +9,9 @@ export class Pets{
 
     _id?: string;
     name:string
-    type:string
+    type?:string
     years:string
-    vaccinated:boolean
+    vaccinated?:boolean
 
 }
 
